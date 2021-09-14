@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    color: blue;
+    color: red;
   }
 
   p {

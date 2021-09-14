@@ -8,22 +8,34 @@ const lightTheme = {
 };
 
 // ✅ uncomment the darkTheme ⬇️
-// const darkTheme = {
-//   primary: "rebeccapurple",
-//   color: "white",
-//   background: "black",
-// };
+const darkTheme = {
+  primary: "rebeccapurple",
+  color: "white",
+  background: "black",
+};
 
 export default function App() {
   // ✅ use the useState hook to make a state variable for theme
   const [theme, setTheme] = useState(lightTheme);
 
+  function setLightTheme() {
+    setTheme(lightTheme);
+    // ...
+    // ...
+  }
+
+  function setDarkTheme() {
+    setTheme(darkTheme);
+    // ...
+    // ...
+  }
+
   // ✅ add click handlers to each button, and set state to change the theme
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
-        <Button>Use Light Theme</Button>
-        <Button>Use Dark Theme</Button>
+        <Button onClick={setLightTheme}>Use Light Theme</Button>
+        <Button onClick={setDarkTheme}>Use Dark Theme</Button>
       </Wrapper>
     </ThemeProvider>
   );
