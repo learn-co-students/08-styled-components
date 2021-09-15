@@ -18,24 +18,12 @@ export default function App() {
   // ✅ use the useState hook to make a state variable for theme
   const [theme, setTheme] = useState(lightTheme);
 
-  function setLightTheme() {
-    setTheme(lightTheme);
-    // ...
-    // ...
-  }
-
-  function setDarkTheme() {
-    setTheme(darkTheme);
-    // ...
-    // ...
-  }
-
   // ✅ add click handlers to each button, and set state to change the theme
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
-        <Button onClick={setLightTheme}>Use Light Theme</Button>
-        <Button onClick={setDarkTheme}>Use Dark Theme</Button>
+        <Button onClick={() => setTheme(lightTheme)}>Use Light Theme</Button>
+        <Button onClick={() => setTheme(darkTheme)}>Use Dark Theme</Button>
       </Wrapper>
     </ThemeProvider>
   );

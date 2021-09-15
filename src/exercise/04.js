@@ -22,6 +22,8 @@ const Button = styled.button`
   }
 `;
 
+const A = Button;
+
 export default function NavBar() {
   // ✅ update the <a> elements to use the Button component instead, with the "as" prop
   // they should still also have the href prop (since we want them to be links)
